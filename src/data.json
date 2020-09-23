@@ -1,0 +1,42 @@
+[
+    {
+        "name": "Pratheek",
+        "points": 6,
+        "team": "CSK"
+    },
+    {
+        "name": "Aditya",
+        "points": 4,
+        "team": "CSK"
+    },
+    {
+        "name": "Charan",
+        "points": 2,
+        "team": "CSK"
+    },
+    {
+        "name": "Sreeram",
+        "points": 2,
+        "team": "CSK"
+    },
+    {
+        "name": "Asish",
+        "points": 2,
+        "team": "CSK"
+    },
+    {
+        "name": "Harsha",
+        "points": 2,
+        "team": "CSK"
+    },
+    {
+        "name": "Mani",
+        "points": 2,
+        "team": "CSK"
+    },
+    {
+        "name": "Naveen",
+        "points": 2,
+        "team": "CSK"
+    }
+]
