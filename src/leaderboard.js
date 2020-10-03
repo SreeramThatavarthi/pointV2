@@ -1,8 +1,16 @@
 import React from 'react';
 
 import data from './data.json'
+import { useMediaQuery } from 'react-responsive'
 
 const Leaderboard = () => {
+    const isDesktopOrLaptop = useMediaQuery({
+        query: '(min-device-width: 1224px)'
+      })
+      
+      const isTabletOrMobileDevice = useMediaQuery({
+        query: '(max-device-width: 1224px)'
+      })
     const rank = ["🥳", "🙃", "😏", "🙂", "😶", "🙁", "😞", "😖"]
     const sortedData = data.sort((a, b) => b.points - a.points)
     console.log(sortedData)
@@ -29,8 +37,31 @@ const Leaderboard = () => {
     })
     return (
         <>
+        {isDesktopOrLaptop && <>
             { listItems}
+            </>
+        }
+        {
+            isTabletOrMobileDevice && 
+            <>
+
+            {
+                sortedData.map((item, index)=>(
+                    <>
+                    <tr>
+                    <th scope="row"><h4>{rank[index]}</h4></th>
+                    <td><h1>{item.name}</h1></td>
+                    <td><h1>{item.points}</h1></td>
+                    <td><h1>{item.team}</h1></td>
+                </tr>
+                    </>
+                ))
+            }
+            
+            </>
+        }
         </>
+
     );
 }
 
